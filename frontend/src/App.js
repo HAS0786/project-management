@@ -2,14 +2,21 @@ import AppLayout from "./components/AppLayout";
 import { Routes, Route } from "react-router-dom";
 import Task from "./components/Task";
 import { Toaster } from "react-hot-toast";
+import TaskModal from "./components/TaskModal";
+import AddTaskModal from "./components/AddTaskModal";
+
+
 function App() {
-  console.log('render app..')
+
+  // console.log('render app..')
   return (
     <AppLayout>
       <Toaster
         position="top-right"
         gutter={8}
       />
+        {/* <Navbar/> */}
+        {/* <Sidebar/> */}
       <Routes>
         <Route path="/:projectId" element={<Task />} />
         <Route path="/" element={
